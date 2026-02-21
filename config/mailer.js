@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require('dotenv').config();
 const nodemailer = require('nodemailer');
 
@@ -12,3 +13,19 @@ const transporter = nodemailer.createTransport({
 });
 
 module.exports = transporter;
+=======
+require('dotenv').config();
+const nodemailer = require('nodemailer');
+
+const transporter = nodemailer.createTransport({
+    host: process.env.EMAIL_HOST || 'smtp.gmail.com',
+    port: parseInt(process.env.EMAIL_PORT) || 587,
+    secure: false,
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+    },
+});
+
+module.exports = transporter;
+>>>>>>> 540944db6f4fb829cf85d62503dbe47250effda7
