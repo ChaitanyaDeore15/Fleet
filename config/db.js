@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 require('dotenv').config();
 const mysql = require('mysql2/promise');
 
@@ -13,19 +12,3 @@ const pool = mysql.createPool({
 });
 
 module.exports = pool;
-=======
-require('dotenv').config();
-const mysql = require('mysql2/promise');
-
-const pool = mysql.createPool({
-  host:               process.env.DB_HOST     || 'localhost',
-  user:               process.env.DB_USER     || 'root',
-  password:           process.env.DB_PASSWORD || '',
-  database:           process.env.DB_NAME     || 'fleet_db',
-  waitForConnections: true,
-  connectionLimit:    10,
-  queueLimit:         0,
-});
-
-module.exports = pool;
->>>>>>> 540944db6f4fb829cf85d62503dbe47250effda7
