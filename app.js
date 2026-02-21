@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> d602823dcee3bbac4d8d5e7682af2ae7e30ec5c1
 require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
